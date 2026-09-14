@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Luduvo Studio
+Comment=Create Luduvo worlds
+Exec=LuduvoEditor %f
+Icon=com.luduvo.Luduvo
+Terminal=false
+Categories=Development;Game;
+MimeType=application/x-luduvo-project;

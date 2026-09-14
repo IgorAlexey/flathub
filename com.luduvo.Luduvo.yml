@@ -1,0 +1,49 @@
+app-id: com.luduvo.Luduvo
+runtime: org.freedesktop.Platform
+runtime-version: "25.08"
+sdk: org.freedesktop.Sdk
+command: LuduvoEditor
+tags:
+  - proprietary
+finish-args:
+  - --device=dri
+  - --socket=x11
+  - --share=ipc
+  - --socket=pulseaudio
+  - --share=network
+  - --filesystem=xdg-documents
+modules:
+  - name: luduvo
+    buildsystem: simple
+    build-commands:
+      - install -Dm755 usr/bin/LuduvoEditor usr/bin/LuduvoGame -t /app/bin
+      - install -Dm644 usr/bin/qt.conf -t /app/bin
+      - cp -a usr/lib usr/plugins /app/
+      - install -Dm644 com.luduvo.Luduvo.desktop
+        /app/share/applications/com.luduvo.Luduvo.desktop
+      - install -Dm644 com.luduvo.Luduvo.player.desktop
+        /app/share/applications/com.luduvo.Luduvo.player.desktop
+      - install -Dm644 com.luduvo.Luduvo.metainfo.xml
+        /app/share/metainfo/com.luduvo.Luduvo.metainfo.xml
+      - install -Dm644 com.luduvo.Luduvo.png
+        /app/share/icons/hicolor/256x256/apps/com.luduvo.Luduvo.png
+    sources:
+      - type: archive
+        url: "https://assets.luduvo.com/releases/42/linux-x86_64/linux-x86_64-b1842c91.zip"
+        sha256: "b1842c9103781052cf2bf841f12ff1a7e92aca2789d8ec132dae62665ce24c2f"
+        strip-components: 0
+        x-checker-data:
+          type: json
+          is-main-source: true
+          url: https://assets.luduvo.com/channels/stable/flathub.json
+          version-query: .version
+          url-query: .url
+          timestamp-query: .released_at
+      - type: file
+        path: com.luduvo.Luduvo.desktop
+      - type: file
+        path: com.luduvo.Luduvo.player.desktop
+      - type: file
+        path: com.luduvo.Luduvo.metainfo.xml
+      - type: file
+        path: com.luduvo.Luduvo.png

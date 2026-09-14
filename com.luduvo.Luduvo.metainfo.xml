@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.luduvo.Luduvo</id>
+  <name>Luduvo</name>
+  <summary>Create and play user-made worlds</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LicenseRef-proprietary</project_license>
+  <description>
+    <p>
+      Luduvo is a platform for building and playing user-created
+      games.  Luduvo Studio is the editor: model worlds, script
+      behavior, and playtest locally.  The player joins multiplayer
+      servers through luduvo:// links from the browser.
+    </p>
+  </description>
+  <launchable type="desktop-id">com.luduvo.Luduvo.desktop</launchable>
+  <screenshots>
+    <screenshot type="default">
+      <image type="source">https://assets.luduvo.com/flathub/studio.png</image>
+      <caption>Luduvo Studio editing a place</caption>
+    </screenshot>
+    <screenshot>
+      <image type="source">https://assets.luduvo.com/flathub/play.png</image>
+      <caption>Playtesting a place in Studio</caption>
+    </screenshot>
+  </screenshots>
+  <url type="homepage">https://luduvo.com</url>
+  <url type="bugtracker">https://forum.luduvo.com</url>
+  <developer id="com.luduvo">
+    <name>Luduvo</name>
+  </developer>
+  <content_rating type="oars-1.1">
+    <content_attribute id="social-chat">intense</content_attribute>
+    <content_attribute id="social-info">mild</content_attribute>
+  </content_rating>
+  <releases>
+    <release version="42" date="2026-09-13"/>
+  </releases>
+  <categories>
+    <category>Game</category>
+    <category>Development</category>
+  </categories>
+</component>

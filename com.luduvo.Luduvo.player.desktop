@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Luduvo
+Comment=Play Luduvo games
+Exec=LuduvoGame %u
+Icon=com.luduvo.Luduvo
+Terminal=false
+NoDisplay=true
+Categories=Game;
+MimeType=x-scheme-handler/luduvo;
